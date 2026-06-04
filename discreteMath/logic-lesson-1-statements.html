@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 1 — Statements and Truth</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="logic-index.html">← Course index</a>
+      <span class="muted">Lesson 1 of 6</span>
+      <a href="logic-lesson-2-connectives.html">Next: Connectives →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Lesson 1</div>
+      <h1>Statements and Truth</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <h2>What is logic?</h2>
+    <p>Logic helps you decide whether a chain of reasons actually supports a conclusion. Scientists, lawyers, programmers, and mathematicians all use the same basic toolkit — we start with the simplest piece: a <strong>statement</strong>.</p>
+
+    <h2>Statements (propositions)</h2>
+    <p>A <strong>statement</strong> (also called a <strong>proposition</strong>) is a declarative sentence that has exactly one truth value: it is either <span class="true">true</span> or <span class="false">false</span>, not both, and not “sort of.”</p>
+
+    <div class="example-box">
+      <div class="label">Statements — each is clearly T or F</div>
+      <ul>
+        <li>“Melbourne is in Australia.” → <span class="true">True</span></li>
+        <li>“The sum of 2 and 3 is 6.” → <span class="false">False</span></li>
+        <li>“All prime numbers greater than 2 are odd.” → <span class="true">True</span></li>
+        <li>“There are exactly seven planets in our solar system.” → depends on definition, but astronomers treat this as a fixed claim that is <span class="false">false</span> (eight planets since Pluto’s reclassification)</li>
+      </ul>
+    </div>
+
+    <h3>Not statements — common categories</h3>
+    <ul>
+      <li><strong>Questions:</strong> “Is homework due tomorrow?” — asks for information; no truth value.</li>
+      <li><strong>Commands:</strong> “Show your work.” — tells someone to act.</li>
+      <li><strong>Exclamations:</strong> “That goal was incredible!” — expresses feeling; not objectively T/F.</li>
+      <li><strong>Pure opinions</strong> (without a clear standard): “Strawberry ice cream is the best flavor.” — debatable, not a fixed fact in logic class.</li>
+      <li><strong>Paradoxes</strong> (skip for now): “This sentence is false.” — breaks the true/false rule.</li>
+    </ul>
+
+    <div class="hint"><strong>Borderline cases:</strong> “The test was hard” sounds like an opinion, but if we agree on a rule (“hard = more than half the class scored below 60%”), it could become a statement. In logic, we need a <em>clear</em> standard before we call something true or false.</div>
+
+    <h2>Labeling statements with letters</h2>
+    <p>We use lowercase letters as nicknames:</p>
+    <ul>
+      <li>Let <span class="symbol">p</span> = “It is raining.”</li>
+      <li>Let <span class="symbol">q</span> = “The ground is wet.”</li>
+    </ul>
+    <p>On a dry sunny day, <span class="symbol">p</span> is <span class="false">false</span> and <span class="symbol">q</span> might also be <span class="false">false</span>. After a storm, both might be <span class="true">true</span>. The letters stay the same; the world decides T or F.</p>
+
+    <h2>Open sentences vs statements</h2>
+    <p>An <strong>open sentence</strong> contains a variable and is not a statement until the variable is fixed.</p>
+
+    <div class="example-box">
+      <div class="label">Open vs closed</div>
+      <p><strong>Open:</strong> “<span class="symbol">x</span> + 5 = 12” — true when <span class="symbol">x</span> = 7, false when <span class="symbol">x</span> = 0.</p>
+      <p><strong>Closed (statement):</strong> “7 + 5 = 12” → <span class="true">True</span>.</p>
+      <p><strong>Open:</strong> “Student <span class="symbol">n</span> passed the exam.” — depends on which student.</p>
+      <p><strong>Closed:</strong> “Maria passed the exam.” → one fixed T or F.</p>
+    </div>
+
+    <div class="key-idea">
+      <strong>Key idea</strong>
+      Algebra and geometry use statements all the time. “If <span class="symbol">x</span> = 4, then <span class="symbol">x<sup>2</sup></span> = 16” is a true conditional. Logic gives the grammar for linking such sentences correctly.
+    </div>
+
+    <h2>Atomic vs compound (preview)</h2>
+    <p>A single statement like “Snow is white” is <strong>atomic</strong> (one piece). “Snow is white <strong>and</strong> grass is green” is <strong>compound</strong> — built from smaller parts. Lesson 2 covers the builders (AND, OR, NOT).</p>
+
+    <section class="practice-section">
+      <h2>Practice — Lesson 1</h2>
+      <p>Difficulty: <span class="diff diff-warm">Warm-up</span> → <span class="diff diff-std">Standard</span> → <span class="diff diff-hard">Challenge</span></p>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.1</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>For each sentence, write <strong>Statement (T/F)</strong> or <strong>Not a statement</strong>. If it is a statement, give its truth value.</p>
+        <ol>
+          <li>15 − 8 = 7</li>
+          <li>Close the window.</li>
+          <li>Every square has four sides.</li>
+          <li>Who invented the telephone?</li>
+          <li>Wow, that was close!</li>
+        </ol>
+        <div class="write-label">Your answers</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.2</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Rewrite each <strong>statement</strong> using letters: define <span class="symbol">p</span>, <span class="symbol">q</span>, … then write “<span class="symbol">p</span> is true” or “<span class="symbol">q</span> is false” for today’s situation (you may invent reasonable T/F).</p>
+        <ol>
+          <li>The school bell rings at 3:00 p.m.</li>
+          <li>I am wearing a hat right now.</li>
+        </ol>
+        <div class="write-label">Definitions + truth values</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.3</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Classify each as <strong>open sentence</strong> or <strong>statement</strong>. If open, give one value of the variable that makes it true and one that makes it false.</p>
+        <ol>
+          <li><span class="symbol">n</span> is an even integer.</li>
+          <li>2 + 2 = 4</li>
+          <li><span class="symbol">x</span><sup>2</sup></span> = 9</li>
+          <li>No dogs can fly.</li>
+        </ol>
+        <div class="write-label">Your work</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.4</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Sort these into two lists: <strong>Statements</strong> and <strong>Not statements</strong>. For statements, mark T or F.</p>
+        <p style="font-family:system-ui,sans-serif;font-size:0.92rem;">“Please sit down.” · “The Pacific Ocean is the largest ocean on Earth.” · “How many states does Australia have?” · “5 × 0 = 0.” · “This paragraph contains exactly ten words.” · “I hope it doesn’t rain.”</p>
+        <div class="write-label">Two lists + T/F</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.5</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Turn each open sentence into a <strong>true</strong> statement by replacing the variable with a specific value, and into a <strong>false</strong> statement with a different value.</p>
+        <ol>
+          <li><span class="symbol">a</span> + 3 &gt; 10</li>
+          <li>The city of <span class="symbol">C</span> is the capital of France.</li>
+        </ol>
+        <div class="write-label">True version / false version for each</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.6</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Write <strong>two</strong> of your own examples in each category: (a) true statement, (b) false statement, (c) not a statement. Swap with a partner and check each other.</p>
+        <div class="write-label">Your six examples</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">1.7</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Consider: “The next coin flip will land heads.” Is this a statement in classical logic? Explain your reasoning in 3–5 sentences. (There is more than one reasonable classroom answer — focus on whether the truth is fixed <em>right now</em>.)</p>
+        <div class="write-label">Your explanation</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation bottom">
+      <a href="logic-index.html">← Course index</a>
+      <span class="muted">Lesson 1 of 6</span>
+      <a href="logic-lesson-2-connectives.html">Next: Connectives →</a>
+    </nav>
+
+    <footer>Logic for beginners · Lesson 1 · Statements and truth</footer>
+  </div>
+</body>
+</html>

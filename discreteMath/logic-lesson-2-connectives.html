@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 2 — NOT, AND, OR</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="logic-lesson-1-statements.html">← Lesson 1</a>
+      <span class="muted">Lesson 2 of 6</span>
+      <a href="logic-lesson-3-truth-tables.html">Next: Truth tables →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Lesson 2</div>
+      <h1>NOT, AND, OR</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <h2>Compound statements</h2>
+    <p>Simple statements can be combined with <strong>logical connectives</strong>. Think of them as glue between ideas. We use symbols so long sentences stay readable.</p>
+
+    <div class="connective-grid">
+      <div class="connective-card">
+        <div class="name">NOT · ¬<span class="symbol">p</span></div>
+        <div class="spoken">“It is not the case that <span class="symbol">p</span>.”</div>
+        <p>Flips T ↔ F. Also written “~<span class="symbol">p</span>” in some books.</p>
+      </div>
+      <div class="connective-card">
+        <div class="name">AND · <span class="symbol">p</span> ∧ <span class="symbol">q</span></div>
+        <div class="spoken">“<span class="symbol">p</span> and <span class="symbol">q</span>.”</div>
+        <p><span class="true">True</span> only when <strong>both</strong> parts are true.</p>
+      </div>
+      <div class="connective-card">
+        <div class="name">OR · <span class="symbol">p</span> ∨ <span class="symbol">q</span></div>
+        <div class="spoken">“<span class="symbol">p</span> or <span class="symbol">q</span>” (inclusive)</div>
+        <p><span class="true">True</span> when <strong>at least one</strong> part is true (including both).</p>
+      </div>
+    </div>
+
+    <h2>NOT in detail</h2>
+    <p>If <span class="symbol">p</span> = “The door is locked” is <span class="true">true</span>, then ¬<span class="symbol">p</span> = “The door is not locked” is <span class="false">false</span>.</p>
+
+    <div class="example-box">
+      <div class="label">Double negation</div>
+      <p>Negating twice returns to the original truth: ¬(¬<span class="symbol">p</span>) has the same truth value as <span class="symbol">p</span>.</p>
+      <p>“It is not true that I did not finish” → means I <em>did</em> finish (clumsy English, clear logic).</p>
+    </div>
+
+    <h2>AND in detail</h2>
+    <p>AND is strict. One false part sinks the whole compound.</p>
+    <ul>
+      <li>“I have a ticket <strong>and</strong> I have ID” → need both to enter.</li>
+      <li>True ∧ False → <span class="false">False</span></li>
+      <li>False ∧ False → <span class="false">False</span></li>
+    </ul>
+
+    <h2>OR in detail — inclusive vs everyday “pick one”</h2>
+    <p>In logic, OR is <strong>inclusive</strong>: both parts can be true and OR is still true.</p>
+
+    <div class="example-box">
+      <div class="label">Inclusive OR</div>
+      <p>“You may have soup or salad” at a buffet often means you <em>can</em> take both. Logical OR matches that generous reading.</p>
+      <p><strong>Exclusive OR</strong> (“exactly one, not both”) is a different connective — we write XOR or “<span class="symbol">p</span> ⊕ <span class="symbol">q</span>” in advanced courses. Unless a problem says “exactly one,” assume inclusive OR.</p>
+    </div>
+
+    <h2>Parentheses matter</h2>
+    <p>Like arithmetic, grouping matters: ( <span class="symbol">p</span> ∧ <span class="symbol">q</span> ) ∨ <span class="symbol">r</span> is not the same as <span class="symbol">p</span> ∧ ( <span class="symbol">q</span> ∨ <span class="symbol">r</span> ). Always write parentheses when mixing connectives.</p>
+
+    <div class="example-box">
+      <div class="label">Worked example</div>
+      <p>Let <span class="symbol">p</span> = “I finished homework.” (<span class="true">T</span>) · <span class="symbol">q</span> = “I studied for the quiz.” (<span class="false">F</span>) · <span class="symbol">r</span> = “I cleaned my room.” (<span class="true">T</span>)</p>
+      <ul>
+        <li>¬<span class="symbol">q</span> → <span class="true">True</span></li>
+        <li><span class="symbol">p</span> ∧ <span class="symbol">q</span> → <span class="false">False</span></li>
+        <li><span class="symbol">p</span> ∨ <span class="symbol">q</span> → <span class="true">True</span></li>
+        <li>(<span class="symbol">p</span> ∧ <span class="symbol">q</span>) ∨ <span class="symbol">r</span> → (<span class="false">F</span>) ∨ <span class="true">T</span> → <span class="true">True</span></li>
+        <li><span class="symbol">p</span> ∧ (<span class="symbol">q</span> ∨ <span class="symbol">r</span>) → <span class="true">T</span> ∧ (<span class="true">T</span>) → <span class="true">True</span></li>
+      </ul>
+    </div>
+
+    <div class="key-idea">
+      <strong>Memory trick</strong>
+      AND is picky (all T). OR is generous (one T enough). NOT is a light switch.
+    </div>
+
+    <section class="practice-section">
+      <h2>Practice — Lesson 2</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.1</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Let <span class="symbol">p</span> be <span class="true">true</span> and <span class="symbol">q</span> be <span class="false">false</span>. Find the truth value:</p>
+        <ol>
+          <li>¬<span class="symbol">p</span></li>
+          <li>¬<span class="symbol">q</span></li>
+          <li><span class="symbol">p</span> ∧ <span class="symbol">q</span></li>
+          <li><span class="symbol">p</span> ∨ <span class="symbol">q</span></li>
+        </ol>
+        <div class="write-label">T or F for each</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.2</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Translate into symbols. Define <span class="symbol">p</span> and <span class="symbol">q</span> first.</p>
+        <ol>
+          <li>The store is open and I have money.</li>
+          <li>It is not raining.</li>
+          <li>I will take the bus or I will walk.</li>
+        </ol>
+        <div class="write-label">Definitions + symbolic form</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.3</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p><span class="symbol">p</span> = <span class="true">T</span>, <span class="symbol">q</span> = <span class="true">T</span>, <span class="symbol">r</span> = <span class="false">F</span>. Evaluate:</p>
+        <ol>
+          <li>¬(<span class="symbol">p</span> ∨ <span class="symbol">r</span>)</li>
+          <li>(<span class="symbol">p</span> ∧ <span class="symbol">r</span>) ∨ <span class="symbol">q</span></li>
+          <li>¬<span class="symbol">p</span> ∨ (<span class="symbol">q</span> ∧ <span class="symbol">r</span>)</li>
+        </ol>
+        <div class="write-label">Show intermediate steps</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.4</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Write each English sentence in logic symbols (define letters).</p>
+        <ol>
+          <li>I am not tired and I am not hungry.</li>
+          <li>Either the red team or the blue team wins (or both tie — use inclusive OR).</li>
+          <li>It is false that the library is closed and the café is closed.</li>
+        </ol>
+        <div class="write-label">Symbol versions</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.5</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>For each pair, explain in one sentence whether they mean the same thing:</p>
+        <ol>
+          <li>“You need a password and a username.” vs “You need a username and a password.”</li>
+          <li>“Pick coffee or tea (choose only one).” vs logical OR without the “only one” rule.</li>
+        </ol>
+        <div class="write-label">Same or different? Why?</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.6</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p><span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span> are all unknown. Find <strong>one assignment</strong> of T/F to <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span> that makes the whole compound <span class="true">true</span>, and one that makes it <span class="false">false</span>:</p>
+        <p style="font-family:system-ui,sans-serif;">(<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span>) ∧ (<span class="symbol">q</span> ∨ <span class="symbol">r</span>) ∧ ¬(<span class="symbol">p</span> ∧ <span class="symbol">r</span>)</p>
+        <div class="write-label">True assignment / false assignment + brief check</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">2.7</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Write a real-life rule (school, sport, or game) using at least two connectives. Give definitions for your letters and explain when the rule passes vs fails.</p>
+        <div class="write-label">Rule + analysis</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation bottom">
+      <a href="logic-lesson-1-statements.html">← Lesson 1</a>
+      <span class="muted">Lesson 2 of 6</span>
+      <a href="logic-lesson-3-truth-tables.html">Next: Truth tables →</a>
+    </nav>
+
+    <footer>Logic for beginners · Lesson 2 · NOT, AND, OR</footer>
+  </div>
+</body>
+</html>

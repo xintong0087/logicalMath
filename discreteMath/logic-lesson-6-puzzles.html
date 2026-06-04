@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 6 — Puzzles &amp; Review</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="logic-lesson-5-arguments.html">← Lesson 5</a>
+      <span class="muted">Lesson 6 of 6</span>
+      <a href="logic-index.html">Course index →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Lesson 6</div>
+      <h1>Puzzles &amp; Review</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <h2>Knights and knaves</h2>
+    <p>On logic puzzles island:</p>
+    <ul>
+      <li><strong>Knights</strong> always tell the truth.</li>
+      <li><strong>Knaves</strong> always lie.</li>
+    </ul>
+    <p>Every person is one or the other. Your job: figure out who is who from what they say.</p>
+
+    <div class="example-box">
+      <div class="label">Worked example</div>
+      <p>A and B meet you. A says: “Both of us are knaves.”</p>
+      <p><strong>Could A be a knight?</strong> If A were a knight, the statement would have to be true — but then both would be knaves, impossible. So A is a <strong>knave</strong>.</p>
+      <p>Then A’s statement is false, so it is <em>not</em> true that both are knaves — at least one is a knight. A is a knave, so <strong>B must be a knight</strong>.</p>
+    </div>
+
+    <h2>Course review checklist</h2>
+    <p>Before the final practice, can you explain each item in your own words?</p>
+    <ul>
+      <li>Statement vs open sentence vs not-a-statement</li>
+      <li>¬, ∧, ∨ and inclusive OR</li>
+      <li>Building truth tables; tautology vs contradiction</li>
+      <li><span class="symbol">p</span> → <span class="symbol">q</span>; converse, inverse, contrapositive; ↔</li>
+      <li>Valid vs sound; modus ponens &amp; tollens; common fallacies</li>
+      <li>De Morgan’s laws</li>
+    </ul>
+
+    <div class="hint"><strong>Teaching tip:</strong> Discuss puzzles out loud. Logic is a language — saying “assume A is a knight and see what breaks” builds the same habit as proof by cases in math.</div>
+
+    <section class="practice-section">
+      <h2>Practice — Lesson 6</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.1</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Quick review — answer without looking back (then check Lessons 1–5):</p>
+        <ol>
+          <li>What is a statement?</li>
+          <li>When is <span class="symbol">p</span> ∧ <span class="symbol">q</span> true?</li>
+          <li>When is <span class="symbol">p</span> → <span class="symbol">q</span> false?</li>
+          <li>Which form always matches the original conditional: converse or contrapositive?</li>
+        </ol>
+        <div class="write-label">Short answers</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.2</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>One person C says: “I am a knave.” Can C be a knight? Can C be a knave? Explain.</p>
+        <div class="write-label">Knight or knave? Why?</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.3</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>A says: “B is a knave.” B says: “A and I are different types.” Determine A and B (knight/knave for each). Show your case analysis.</p>
+        <div class="write-label">Case 1 / Case 2 reasoning</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.4</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Mixed skills:</p>
+        <ol>
+          <li>Let <span class="symbol">p</span> = <span class="true">T</span>, <span class="symbol">q</span> = <span class="false">F</span>. Evaluate (¬<span class="symbol">p</span> ∨ <span class="symbol">q</span>) → <span class="symbol">p</span>.</li>
+          <li>Write the contrapositive of: “If a quadrilateral is a square, then it is a rectangle.”</li>
+          <li>Is this valid? “If you live in Sydney, you live in Australia. You live in Australia. So you live in Sydney.”</li>
+        </ol>
+        <div class="write-label">Three parts</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.5</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Three friends make claims about a hidden card (suit is hearts or spades; rank is high or low):</p>
+        <ul>
+          <li>Ada: “The card is hearts OR high (or both).”</li>
+          <li>Ben: “If the card is spades, then it is low.”</li>
+          <li>Cara: “The card is not both spades and high.”</li>
+        </ul>
+        <p>The card is <strong>spades and low</strong>. Mark each person’s statement true or false. Did anyone use a true conditional with a false hypothesis?</p>
+        <div class="write-label">T/F for each + note on Ben’s statement</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.6</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Three people — X, Y, Z — each either knight or knave. X says: “Y is a knave.” Y says: “Z is a knave.” Z says: “X and Y are both knaves.” Find the only consistent assignment. (Try assuming X is a knight and follow the chain.)</p>
+        <div class="write-label">Full solution with cases</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.7</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p><strong>Real world + synthesis:</strong> Find a short quote from news, an ad, or social media. (1) Identify premises and conclusion if it is an argument. (2) Name any fallacy or invalid pattern. (3) Rewrite using at least two of: ¬, ∧, ∨, →. (4) Suggest a clearer honest version.</p>
+        <div class="write-label">Four-part analysis</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">6.8</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p><strong>Mini project:</strong> Invent a 4-row truth table for an expression you build from <span class="symbol">p</span>, <span class="symbol">q</span>, ¬, ∧, ∨, → that matches a real rule (e.g. “free delivery applies when…”). Explain each row in plain English.</p>
+        <div class="write-label">Expression, table, English story</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <div class="key-idea">
+      <strong>Congratulations</strong>
+      You finished the six-lesson logic course. Revisit any lesson where warm-ups felt easy but challenges felt hard — that gap is where the learning happened.
+    </div>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation bottom">
+      <a href="logic-lesson-5-arguments.html">← Lesson 5</a>
+      <span class="muted">Lesson 6 of 6</span>
+      <a href="logic-index.html">Course index →</a>
+    </nav>
+
+    <footer>Logic for beginners · Lesson 6 · Puzzles &amp; review</footer>
+  </div>
+</body>
+</html>

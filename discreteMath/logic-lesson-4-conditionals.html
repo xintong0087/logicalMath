@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 4 — If…Then &amp; Biconditionals</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="logic-lesson-3-truth-tables.html">← Lesson 3</a>
+      <span class="muted">Lesson 4 of 6</span>
+      <a href="logic-lesson-5-arguments.html">Next: Arguments →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Lesson 4</div>
+      <h1>If…Then &amp; Biconditionals</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <h2>Conditionals — “if…then”</h2>
+    <p>A <strong>conditional</strong> has the form <strong>if <span class="symbol">p</span>, then <span class="symbol">q</span></strong>, written <span class="symbol">p</span> → <span class="symbol">q</span>.</p>
+    <ul>
+      <li><span class="symbol">p</span> = <strong>hypothesis</strong> (antecedent) — the “if” part.</li>
+      <li><span class="symbol">q</span> = <strong>conclusion</strong> (consequent) — the “then” part.</li>
+    </ul>
+
+    <div class="example-box">
+      <div class="label">Promise metaphor</div>
+      <p>“If you finish your chores, then you get dessert.” Think of <span class="symbol">p</span> → <span class="symbol">q</span> as a promise. The promise is broken only when chores are done (<span class="symbol">p</span> true) but dessert is denied (<span class="symbol">q</span> false).</p>
+      <p>If chores are not done (<span class="symbol">p</span> false), the promise is not broken — dessert might still happen for another reason, and the “if…then” can still count as true in logic.</p>
+    </div>
+
+    <table class="truth-table" aria-label="Truth table for conditional">
+      <thead><tr><th><span class="symbol">p</span></th><th><span class="symbol">q</span></th><th><span class="symbol">p</span> → <span class="symbol">q</span></th></tr></thead>
+      <tbody>
+        <tr><td class="true">T</td><td class="true">T</td><td class="true">T</td></tr>
+        <tr><td class="true">T</td><td class="false">F</td><td class="false">F</td></tr>
+        <tr><td class="false">F</td><td class="true">T</td><td class="true">T</td></tr>
+        <tr><td class="false">F</td><td class="false">F</td><td class="true">T</td></tr>
+      </tbody>
+    </table>
+
+    <div class="hint"><strong>Only one false row:</strong> <span class="symbol">p</span> → <span class="symbol">q</span> is false exactly when a true hypothesis leads to a false conclusion. Memorize that row: T → F = F.</div>
+
+    <h2>Converse, inverse, contrapositive</h2>
+    <p>Start with: “If a number is divisible by 4, then it is even.” Let <span class="symbol">p</span> = divisible by 4, <span class="symbol">q</span> = even.</p>
+
+    <table class="truth-table" style="max-width:100%;">
+      <thead>
+        <tr>
+          <th>Form</th>
+          <th>Symbol</th>
+          <th>Sentence</th>
+          <th>True?</th>
+        </tr>
+      </thead>
+      <tbody style="font-family:system-ui,sans-serif;font-size:0.88rem;text-align:left;">
+        <tr><td>Original</td><td><span class="symbol">p</span> → <span class="symbol">q</span></td><td>If divisible by 4, then even.</td><td class="true">Yes</td></tr>
+        <tr><td>Converse</td><td><span class="symbol">q</span> → <span class="symbol">p</span></td><td>If even, then divisible by 4.</td><td class="false">No (6)</td></tr>
+        <tr><td>Inverse</td><td>¬<span class="symbol">p</span> → ¬<span class="symbol">q</span></td><td>If not div. by 4, then not even.</td><td class="false">No (6)</td></tr>
+        <tr><td>Contrapositive</td><td>¬<span class="symbol">q</span> → ¬<span class="symbol">p</span></td><td>If not even, then not div. by 4.</td><td class="true">Yes</td></tr>
+      </tbody>
+    </table>
+
+    <div class="key-idea">
+      <strong>Big takeaway</strong>
+      A conditional and its <strong>contrapositive</strong> always have the same truth value. The converse and inverse need their own checks — do not assume they match the original.
+    </div>
+
+    <h2>Biconditional — “if and only if”</h2>
+    <p><span class="symbol">p</span> ↔ <span class="symbol">q</span> means both <span class="symbol">p</span> → <span class="symbol">q</span> and <span class="symbol">q</span> → <span class="symbol">p</span>. Both directions must hold.</p>
+
+    <div class="example-box">
+      <div class="label">Example</div>
+      <p>“A triangle is equilateral if and only if it has three equal angles.” Being equilateral and having three equal angles are equivalent — each implies the other.</p>
+    </div>
+
+    <table class="truth-table" aria-label="Truth table for biconditional">
+      <thead><tr><th><span class="symbol">p</span></th><th><span class="symbol">q</span></th><th><span class="symbol">p</span> ↔ <span class="symbol">q</span></th></tr></thead>
+      <tbody>
+        <tr><td class="true">T</td><td class="true">T</td><td class="true">T</td></tr>
+        <tr><td class="true">T</td><td class="false">F</td><td class="false">F</td></tr>
+        <tr><td class="false">F</td><td class="true">T</td><td class="false">F</td></tr>
+        <tr><td class="false">F</td><td class="false">F</td><td class="true">T</td></tr>
+      </tbody>
+    </table>
+
+    <p>Notice: ↔ is true when both parts match (both T or both F).</p>
+
+    <section class="practice-section">
+      <h2>Practice — Lesson 4</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.1</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Identify hypothesis and conclusion, then write symbols.</p>
+        <ol>
+          <li>If it snows, then school is canceled.</li>
+          <li>If you press the power button, then the laptop turns on.</li>
+        </ol>
+        <div class="write-label"><span class="symbol">p</span>, <span class="symbol">q</span>, and <span class="symbol">p</span> → <span class="symbol">q</span></div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.2</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Let <span class="symbol">p</span> = <span class="false">F</span>, <span class="symbol">q</span> = <span class="true">T</span>. Find the truth value of <span class="symbol">p</span> → <span class="symbol">q</span> and <span class="symbol">p</span> ↔ <span class="symbol">q</span>.</p>
+        <div class="write-label">Two answers + one-sentence reason for →</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.3</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Original: “If a shape is a square, then it has four sides.” Write the converse, inverse, and contrapositive in English. Label each true or false.</p>
+        <div class="write-label">Three sentences + T/F</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.4</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Build a truth table for <span class="symbol">p</span> → <span class="symbol">q</span>. Circle the only row where the conditional is false. Explain that row in the promise metaphor.</p>
+        <div class="write-label">Table + explanation</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.5</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Which of these English sentences are biconditionals? Rewrite each biconditional as <span class="symbol">p</span> ↔ <span class="symbol">q</span>.</p>
+        <ol>
+          <li>You may vote if and only if you are 18 or older.</li>
+          <li>If you study, then you learn.</li>
+          <li>A number is odd if and only if it is not divisible by 2.</li>
+        </ol>
+        <div class="write-label">Your answers</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.6</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Original: “If a student earns at least 90%, then they get an A.” Give a realistic <strong>false converse</strong> scenario (converse is false but sounds plausible at first). Then write the contrapositive and explain why it matches the original’s truth.</p>
+        <div class="write-label">Scenario + contrapositive + explanation</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">4.7</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Build a full truth table for (<span class="symbol">p</span> → <span class="symbol">q</span>) ↔ (<span class="symbol">q</span> → <span class="symbol">p</span>). When are a conditional and its converse both true at the same time? Relate your answer to ↔.</p>
+        <div class="write-label">Table + discussion</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation bottom">
+      <a href="logic-lesson-3-truth-tables.html">← Lesson 3</a>
+      <span class="muted">Lesson 4 of 6</span>
+      <a href="logic-lesson-5-arguments.html">Next: Arguments →</a>
+    </nav>
+
+    <footer>Logic for beginners · Lesson 4 · Conditionals &amp; biconditionals</footer>
+  </div>
+</body>
+</html>

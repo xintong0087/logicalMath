@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 5 — Valid Arguments &amp; Fallacies</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="logic-lesson-4-conditionals.html">← Lesson 4</a>
+      <span class="muted">Lesson 5 of 6</span>
+      <a href="logic-lesson-6-puzzles.html">Next: Puzzles →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Lesson 5</div>
+      <h1>Valid Arguments &amp; Fallacies</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <h2>Arguments: premises and conclusion</h2>
+    <p>An <strong>argument</strong> is not a fight — it is a structured list:</p>
+    <ul>
+      <li><strong>Premises</strong> — statements you assume for the moment.</li>
+      <li><strong>Conclusion</strong> — what you claim follows from them.</li>
+    </ul>
+
+    <div class="example-box">
+      <div class="label">Example argument</div>
+      <ol>
+        <li>All mammals breathe air. (premise)</li>
+        <li>Whales are mammals. (premise)</li>
+        <li>Therefore whales breathe air. (conclusion)</li>
+      </ol>
+    </div>
+
+    <h2>Valid vs sound</h2>
+    <ul>
+      <li><strong>Valid:</strong> IF the premises were true, the conclusion <em>must</em> be true. Structure is correct.</li>
+      <li><strong>Sound:</strong> Valid <strong>and</strong> every premise is actually true in the real world.</li>
+    </ul>
+    <p>A valid argument can still have a false conclusion if a premise is false. Validity is about the <em>pattern</em>, not whether you agree with the facts.</p>
+
+    <h2>Valid patterns to recognize</h2>
+
+    <div class="example-box">
+      <div class="label">Modus ponens</div>
+      <p><span class="symbol">p</span> → <span class="symbol">q</span> · <span class="symbol">p</span> · therefore <span class="symbol">q</span></p>
+      <p>If it rains, the field is muddy. It rains. ∴ The field is muddy. ✓</p>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Modus tollens</div>
+      <p><span class="symbol">p</span> → <span class="symbol">q</span> · ¬<span class="symbol">q</span> · therefore ¬<span class="symbol">p</span></p>
+      <p>If the alarm is armed, the light is red. The light is not red. ∴ The alarm is not armed. ✓</p>
+    </div>
+
+    <h2>Invalid patterns — classic traps</h2>
+
+    <div class="example-box">
+      <div class="label">Affirming the consequent ✗</div>
+      <p>From <span class="symbol">p</span> → <span class="symbol">q</span> and <span class="symbol">q</span>, concluding <span class="symbol">p</span>.</p>
+      <p>“If you study hard, you pass. You passed. So you studied hard.” — Maybe, but not forced by logic.</p>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Denying the antecedent ✗</div>
+      <p>From <span class="symbol">p</span> → <span class="symbol">q</span> and ¬<span class="symbol">p</span>, concluding ¬<span class="symbol">q</span>.</p>
+      <p>“If it rains, the game is canceled. It didn’t rain. So the game wasn’t canceled.” — Wrong; they might cancel for wind.</p>
+    </div>
+
+    <h2>More fallacies (everyday names)</h2>
+    <ul>
+      <li><strong>False dilemma:</strong> “Either you’re with us or against us” when middle options exist.</li>
+      <li><strong>Hasty generalization:</strong> “My friend got sick after sushi, so all sushi is unsafe.”</li>
+      <li><strong>Ad hominem:</strong> Attacking the person instead of the argument.</li>
+    </ul>
+
+    <h2>De Morgan’s laws (simplifying negations)</h2>
+    <ul>
+      <li>¬(<span class="symbol">p</span> ∧ <span class="symbol">q</span>) ≡ (¬<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span>) — “Not both” = “at least one is false.”</li>
+      <li>¬(<span class="symbol">p</span> ∨ <span class="symbol">q</span>) ≡ (¬<span class="symbol">p</span> ∧ ¬<span class="symbol">q</span>) — “Neither” = “not this and not that.”</li>
+    </ul>
+
+    <div class="example-box">
+      <div class="label">Worked example</div>
+      <p>“It is not true that the store is open and I have cash.”</p>
+      <p>Let <span class="symbol">p</span> = store open, <span class="symbol">q</span> = I have cash. Original: ¬(<span class="symbol">p</span> ∧ <span class="symbol">q</span>). De Morgan: ¬<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span> = “The store is closed OR I don’t have cash (or both).”</p>
+    </div>
+
+    <section class="practice-section">
+      <h2>Practice — Lesson 5</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.1</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Label <strong>premises</strong> and <strong>conclusion</strong>:</p>
+        <p>“Soccer is a sport. All sports require practice. Therefore soccer requires practice.”</p>
+        <div class="write-label">P1, P2, conclusion</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.2</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Rewrite using De Morgan: ¬(<span class="symbol">p</span> ∨ <span class="symbol">q</span>). Then put it in plain English if <span class="symbol">p</span> = “I like math” and <span class="symbol">q</span> = “I like art.”</p>
+        <div class="write-label">Symbolic + English</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.3</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Valid or invalid? Name the pattern if you can.</p>
+        <ol>
+          <li>If <span class="symbol">n</span> is divisible by 10, then <span class="symbol">n</span> is divisible by 5. <span class="symbol">n</span> is divisible by 10. So <span class="symbol">n</span> is divisible by 5.</li>
+          <li>If you wear a helmet, you are safe. You are safe. So you wore a helmet.</li>
+          <li>If it is Friday, the cafeteria serves pizza. It is not Friday. So no pizza today.</li>
+        </ol>
+        <div class="write-label">Valid/invalid + pattern name</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.4</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Fix this invalid argument by changing <strong>only the conclusion</strong> so the argument becomes valid (premises stay the same):</p>
+        <p>P1: If a bird is a penguin, it cannot fly.<br>P2: Tweety is not a penguin.<br>Bad conclusion: Tweety can fly.</p>
+        <div class="write-label">New valid conclusion + why</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.5</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Build a truth table for (<span class="symbol">p</span> → <span class="symbol">q</span>) ∧ <span class="symbol">p</span>. When the last column is true, what must be true about <span class="symbol">q</span>? Connect to modus ponens.</p>
+        <div class="write-label">Table + connection</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.6</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Write a <strong>valid</strong> argument with two premises and one conclusion about a topic you know (sport, game, school rule). Then write a <strong>invalid</strong> argument on the same topic that looks similar but commits affirming the consequent or denying the antecedent.</p>
+        <div class="write-label">Valid argument / invalid argument</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">5.7</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Paraphrase this ad-style claim and identify any fallacy: “Either you buy our headphones or you don’t care about music quality.” Rewrite it as an honest logical statement that does not trap the listener.</p>
+        <div class="write-label">Fallacy name + honest rewrite</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation bottom">
+      <a href="logic-lesson-4-conditionals.html">← Lesson 4</a>
+      <span class="muted">Lesson 5 of 6</span>
+      <a href="logic-lesson-6-puzzles.html">Next: Puzzles →</a>
+    </nav>
+
+    <footer>Logic for beginners · Lesson 5 · Arguments &amp; fallacies</footer>
+  </div>
+</body>
+</html>

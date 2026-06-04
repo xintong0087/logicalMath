@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 3 — Truth Tables</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="logic-lesson-2-connectives.html">← Lesson 2</a>
+      <span class="muted">Lesson 3 of 6</span>
+      <a href="logic-lesson-4-conditionals.html">Next: Conditionals →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Lesson 3</div>
+      <h1>Truth Tables</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <h2>Why truth tables?</h2>
+    <p>A <strong>truth table</strong> lists every way the parts of a compound statement can be true or false, and shows the result for the whole expression. With two basic statements <span class="symbol">p</span> and <span class="symbol">q</span>, there are <strong>four</strong> rows: TT, TF, FT, FF.</p>
+
+    <h2>Recipe for building a table</h2>
+    <ol>
+      <li>Count variables: <span class="symbol">n</span> variables → 2<sup><span class="symbol">n</span></sup> rows.</li>
+      <li>Write columns for each variable (often <span class="symbol">p</span> changes slowest, <span class="symbol">q</span> fastest — either pattern is fine if you are consistent).</li>
+      <li>Add columns for sub-expressions from the inside out (parentheses first).</li>
+      <li>The final column is the whole statement.</li>
+    </ol>
+
+    <h3>NOT</h3>
+    <table class="truth-table" aria-label="Truth table for NOT">
+      <thead><tr><th><span class="symbol">p</span></th><th>¬<span class="symbol">p</span></th></tr></thead>
+      <tbody>
+        <tr><td class="true">T</td><td class="false">F</td></tr>
+        <tr><td class="false">F</td><td class="true">T</td></tr>
+      </tbody>
+    </table>
+
+    <h3>AND</h3>
+    <table class="truth-table" aria-label="Truth table for AND">
+      <thead><tr><th><span class="symbol">p</span></th><th><span class="symbol">q</span></th><th><span class="symbol">p</span> ∧ <span class="symbol">q</span></th></tr></thead>
+      <tbody>
+        <tr><td class="true">T</td><td class="true">T</td><td class="true">T</td></tr>
+        <tr><td class="true">T</td><td class="false">F</td><td class="false">F</td></tr>
+        <tr><td class="false">F</td><td class="true">T</td><td class="false">F</td></tr>
+        <tr><td class="false">F</td><td class="false">F</td><td class="false">F</td></tr>
+      </tbody>
+    </table>
+
+    <h3>OR</h3>
+    <table class="truth-table" aria-label="Truth table for OR">
+      <thead><tr><th><span class="symbol">p</span></th><th><span class="symbol">q</span></th><th><span class="symbol">p</span> ∨ <span class="symbol">q</span></th></tr></thead>
+      <tbody>
+        <tr><td class="true">T</td><td class="true">T</td><td class="true">T</td></tr>
+        <tr><td class="true">T</td><td class="false">F</td><td class="true">T</td></tr>
+        <tr><td class="false">F</td><td class="true">T</td><td class="true">T</td></tr>
+        <tr><td class="false">F</td><td class="false">F</td><td class="false">F</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Worked example — ¬(<span class="symbol">p</span> ∧ <span class="symbol">q</span>)</div>
+      <table class="truth-table" aria-label="Truth table negation of and">
+        <thead><tr><th><span class="symbol">p</span></th><th><span class="symbol">q</span></th><th><span class="symbol">p</span> ∧ <span class="symbol">q</span></th><th>¬(<span class="symbol">p</span> ∧ <span class="symbol">q</span>)</th></tr></thead>
+        <tbody>
+          <tr><td class="true">T</td><td class="true">T</td><td class="true">T</td><td class="false">F</td></tr>
+          <tr><td class="true">T</td><td class="false">F</td><td class="false">F</td><td class="true">T</td></tr>
+          <tr><td class="false">F</td><td class="true">T</td><td class="false">F</td><td class="true">T</td></tr>
+          <tr><td class="false">F</td><td class="false">F</td><td class="false">F</td><td class="true">T</td></tr>
+        </tbody>
+      </table>
+      <p>English: “Not both” is false only when <span class="symbol">p</span> and <span class="symbol">q</span> are simultaneously true.</p>
+    </div>
+
+    <h2>Tautology and contradiction (names worth knowing)</h2>
+    <ul>
+      <li><strong>Tautology:</strong> always true (final column all T). Example: <span class="symbol">p</span> ∨ ¬<span class="symbol">p</span>.</li>
+      <li><strong>Contradiction:</strong> always false (final column all F). Example: <span class="symbol">p</span> ∧ ¬<span class="symbol">p</span>.</li>
+    </ul>
+
+    <div class="hint"><strong>Three variables:</strong> With <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span> you need 8 rows. Challenge problems may use three — work systematically so you do not skip a case.</div>
+
+    <section class="practice-section">
+      <h2>Practice — Lesson 3</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.1</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Complete the missing cells in this OR table:</p>
+        <table class="truth-table">
+          <thead><tr><th><span class="symbol">p</span></th><th><span class="symbol">q</span></th><th><span class="symbol">p</span> ∨ <span class="symbol">q</span></th></tr></thead>
+          <tbody>
+            <tr><td>T</td><td>T</td><td>?</td></tr>
+            <tr><td>T</td><td>F</td><td>?</td></tr>
+            <tr><td>F</td><td>T</td><td>?</td></tr>
+            <tr><td>F</td><td>F</td><td>?</td></tr>
+          </tbody>
+        </table>
+        <div class="write-label">Fill T/F in the table (or rewrite completed table here)</div>
+        <div class="write" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.2</span>
+          <span class="diff diff-warm">Warm-up</span>
+        </div>
+        <p>Build a full truth table for ¬<span class="symbol">p</span> ∨ <span class="symbol">q</span>. How many rows are true in the final column?</p>
+        <div class="write-label">Table + count</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.3</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Build a truth table for (<span class="symbol">p</span> ∨ <span class="symbol">q</span>) ∧ ¬<span class="symbol">p</span>. Describe in plain English when this compound is true.</p>
+        <div class="write-label">Table + English description</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.4</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Is <span class="symbol">p</span> ∨ ¬<span class="symbol">p</span> a tautology? Build the table and explain.</p>
+        <div class="write-label">Table + yes/no with reason</div>
+        <div class="write tall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.5</span>
+          <span class="diff diff-std">Standard</span>
+        </div>
+        <p>Build truth tables for both sides and decide if they always match (always same final column):</p>
+        <p style="font-family:system-ui,sans-serif;">¬(<span class="symbol">p</span> ∧ <span class="symbol">q</span>) &nbsp; and &nbsp; (¬<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span>)</p>
+        <div class="write-label">Two tables + conclusion (this is De Morgan’s law)</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.6</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Build an 8-row truth table for (<span class="symbol">p</span> ∧ <span class="symbol">q</span>) ∨ (¬<span class="symbol">p</span> ∧ <span class="symbol">r</span>). List every row where the final column is true.</p>
+        <div class="write-label">Full table or list of true rows</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">3.7</span>
+          <span class="diff diff-hard">Challenge</span>
+        </div>
+        <p>Design your own compound statement using <span class="symbol">p</span>, <span class="symbol">q</span>, ¬, ∧, ∨ that is true in <strong>exactly two</strong> of the four rows. Write the expression and verify with a table.</p>
+        <div class="write-label">Expression + verification table</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation bottom">
+      <a href="logic-lesson-2-connectives.html">← Lesson 2</a>
+      <span class="muted">Lesson 3 of 6</span>
+      <a href="logic-lesson-4-conditionals.html">Next: Conditionals →</a>
+    </nav>
+
+    <footer>Logic for beginners · Lesson 3 · Truth tables</footer>
+  </div>
+</body>
+</html>
