@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deduction — Lesson 6 · Puzzles</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Navigation">
+      <a href="logic-deduction-5-arguments.html">← Set 5</a>
+      <span class="muted">Set 6 of 6</span>
+      <a href="logic-deduction-index.html">Deduction index →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Deduction · Lesson 6</div>
+      <h1>Puzzles &amp; Synthesis</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <div class="hint"><strong>Patience rule:</strong> For knights-and-knaves problems, try each case (“Assume A is a knight…”) and run it to the end. If it breaks, record <em>why</em> before starting the next case. A correct answer with no case analysis earns partial credit at best.</div>
+
+    <section class="practice-section">
+      <h2>Deduction problems — Puzzles</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D6.1</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Four people — A, B, C, D — are each a knight (always truthful) or a knave (always lies). You hear:</p>
+        <ul>
+          <li><strong>A:</strong> “B and C are the same type.”</li>
+          <li><strong>B:</strong> “D is a knave.”</li>
+          <li><strong>C:</strong> “A is a knave if and only if D is a knight.”</li>
+          <li><strong>D:</strong> “B is a knight and C is a knave.”</li>
+        </ul>
+        <ol>
+          <li>There are 16 possible type assignments. Use structured case analysis: assume A is knight, derive everything that follows; if contradiction, discard. Repeat for A knave.</li>
+          <li>Within each case, do not stop at the first guess — write whether B, C, D must be knight or knave and verify all four statements.</li>
+          <li>State the unique solution (or prove none exists).</li>
+        </ol>
+        <div class="write-label">Full case analysis + verified solution</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D6.2</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Three houses in a row (left, middle, right). Each house has a different pet (cat, dog, fish) and a different color door (red, green, blue). Clues:</p>
+        <ol>
+          <li>The cat is not in the middle house.</li>
+          <li>The red door is immediately to the left of the house with the dog.</li>
+          <li>The fish is in the house with the green door.</li>
+          <li>The house on the right does not have a blue door.</li>
+        </ol>
+        <ol type="a">
+          <li>Translate each clue using propositional letters (e.g. <span class="symbol">C<sub>L</sub></span> = cat in left house). Use as many letters as you need.</li>
+          <li>Build a table of all 6 permutations of pets × check door constraints systematically. For each candidate layout, mark each clue T or F.</li>
+          <li>Identify the only layout that satisfies all four clues. Show your elimination work — do not jump to the answer.</li>
+        </ol>
+        <div class="write-label">Symbolization + elimination table + final layout</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D6.3</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Five suspects — P, Q, R, S, T — exactly one is guilty. Each makes one statement:</p>
+        <ul>
+          <li><strong>P:</strong> “The guilty person is Q or R.”</li>
+          <li><strong>Q:</strong> “If P is guilty, then S is innocent.”</li>
+          <li><strong>R:</strong> “T is guilty if and only if P is innocent.”</li>
+          <li><strong>S:</strong> “It is not true that both Q and T are guilty.”</li>
+          <li><strong>T:</strong> “R is guilty and Q is innocent.”</li>
+        </ul>
+        <p>You are told: <strong>exactly four</strong> statements are true and <strong>exactly one</strong> is false (under the actual guilty person).</p>
+        <ol>
+          <li>For each suspect G ∈ {P, Q, R, S, T}, assume G is guilty and compute T/F for all five statements. Use a 5-row table.</li>
+          <li>Which guilty person is the only one that yields “four true, one false”?</li>
+          <li>Verify: for your answer, write one sentence per statement explaining why it is T or F.</li>
+        </ol>
+        <div class="write-label">5-row assumption table + verification sentences</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D6.4</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p><strong>Course synthesis</strong> — one long problem, all tools allowed:</p>
+        <p>Define: <span class="symbol">p</span> = “The server is online,” <span class="symbol">q</span> = “The password is correct,” <span class="symbol">r</span> = “The user has admin rights,” <span class="symbol">s</span> = “Access is granted.”</p>
+        <p>System rules:</p>
+        <ul>
+          <li>R1: Access is granted if and only if the server is online and (the password is correct or the user has admin rights).</li>
+          <li>R2: If the password is not correct, then the user does not have admin rights. (Contrapositive form also acceptable.)</li>
+          <li>R3: The server is not online unless maintenance mode is off. (Hint: rewrite “A unless B” as ¬B → A or equivalent.)</li>
+        </ul>
+        <p>Given: maintenance mode is off, the password is not correct, access is granted.</p>
+        <ol type="a">
+          <li>Symbolize R1–R3. Introduce a letter for “maintenance mode is off” if needed.</li>
+          <li>Build an 8- or 16-row table (your choice — explain why) and find every row consistent with all givens and rules.</li>
+          <li>What must be true about <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span>, <span class="symbol">s</span>? Prove any claim you make.</li>
+          <li>Write a 5-sentence “incident report” in plain English explaining what happened, citing which rules you used.</li>
+        </ol>
+        <div class="write-label">Symbols + table + forced truths + incident report</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Navigation bottom">
+      <a href="logic-deduction-5-arguments.html">← Set 5</a>
+      <span class="muted">Set 6 of 6</span>
+      <a href="logic-deduction-index.html">Deduction index →</a>
+    </nav>
+
+    <footer>Logic for beginners · Deduction · Lesson 6</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deduction — Lesson 2 · NOT, AND, OR</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Navigation">
+      <a href="logic-deduction-1-statements.html">← Set 1</a>
+      <span class="muted">Set 2 of 6</span>
+      <a href="logic-deduction-3-truth-tables.html">Next set →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Deduction · Lesson 2</div>
+      <h1>NOT, AND, OR</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <div class="hint"><strong>Patience rule:</strong> When a problem asks for <em>all</em> assignments, list every row (8 for three variables, 16 for four). Show the compound evaluated step by step for each row you claim works.</div>
+
+    <section class="practice-section">
+      <h2>Deduction problems — Connectives</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D2.1</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Let <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span> be unknown truth values. Find <strong>every</strong> assignment (T/F to each letter) that makes the following compound <span class="true">true</span>:</p>
+        <p style="font-family:system-ui,sans-serif;">(<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span>) ∧ (¬<span class="symbol">p</span> ∨ <span class="symbol">r</span>) ∧ (<span class="symbol">q</span> ∨ ¬<span class="symbol">r</span>) ∧ ¬(<span class="symbol">p</span> ∧ <span class="symbol">q</span> ∧ <span class="symbol">r</span>)</p>
+        <ol>
+          <li>Build an 8-row table with columns for <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span>, and each of the four conjuncts, plus the final AND.</li>
+          <li>List every row where the final column is T.</li>
+          <li>Explain in one paragraph why any row you did <em>not</em> list fails (refer to which conjunct breaks).</li>
+        </ol>
+        <div class="write-label">Full 8-row table + list + explanation</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D2.2</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>A club’s membership rule in English:</p>
+        <blockquote style="margin:0.75rem 0;padding:0.75rem 1rem;border-left:3px solid var(--line);background:#fff;">“You may enter the lounge <strong>exactly when</strong> you are a paid member <strong>and</strong> either you have a guest pass <strong>or</strong> it is not after 9 p.m.”</blockquote>
+        <p>Define <span class="symbol">m</span> = paid member, <span class="symbol">g</span> = has guest pass, <span class="symbol">l</span> = it is after 9 p.m., <span class="symbol">e</span> = may enter the lounge.</p>
+        <ol>
+          <li>Translate as <span class="symbol">e</span> ≡ <span class="symbol">m</span> ∧ (<span class="symbol">g</span> ∨ ¬<span class="symbol">l</span>) using only ¬, ∧, ∨ — write both sides and explain why they must match (entry allowed ↔ condition met).</li>
+          <li>Evaluate for <strong>all eight</strong> assignments of (<span class="symbol">m</span>, <span class="symbol">g</span>, <span class="symbol">l</span>): compute the right-hand condition and decide whether <span class="symbol">e</span> must be T or F in each row.</li>
+          <li>Which of the eight worlds allow entry (<span class="symbol">e</span> true)? Which forbid it? Match at least two rows to a short English story (“Member without pass before 9…”).</li>
+        </ol>
+        <div class="write-label">Symbolization + 8-row evaluation + stories</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D2.3</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Are these two compounds <strong>logically equivalent</strong> (same truth value in every row)? You may not appeal to De Morgan by name — prove it by exhaustive check or produce one counterexample row.</p>
+        <p style="font-family:system-ui,sans-serif;">A: ¬(<span class="symbol">p</span> ∧ (¬<span class="symbol">q</span> ∨ <span class="symbol">r</span>)) &nbsp;&nbsp; B: (¬<span class="symbol">p</span> ∨ <span class="symbol">q</span>) ∧ (¬<span class="symbol">p</span> ∨ ¬<span class="symbol">r</span>)</p>
+        <ol>
+          <li>Build an 8-row table with sub-columns for the inner parts of A and B.</li>
+          <li>State “equivalent” or “not equivalent.”</li>
+          <li>If not equivalent, identify every row where they differ. If equivalent, confirm all eight rows match.</li>
+        </ol>
+        <div class="write-label">8-row comparison table + verdict</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D2.4</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Four switches <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span>, <span class="symbol">s</span> control a warning light. The light is ON exactly when:</p>
+        <p style="font-family:system-ui,sans-serif;">(<span class="symbol">p</span> ∧ <span class="symbol">q</span>) ∨ (¬<span class="symbol">p</span> ∧ <span class="symbol">r</span> ∧ ¬<span class="symbol">s</span>) ∨ (<span class="symbol">q</span> ∧ ¬<span class="symbol">r</span> ∧ <span class="symbol">s</span>)</p>
+        <ol>
+          <li>How many rows does a complete truth table need? Build it — all rows, all sub-columns for the three disjuncts, final OR.</li>
+          <li>Count how many assignments turn the light ON.</li>
+          <li>The engineer claims: “If <span class="symbol">p</span> and <span class="symbol">r</span> are both ON, the light must be ON.” Test the claim by checking <strong>every</strong> row where <span class="symbol">p</span> = T and <span class="symbol">r</span> = T. Is the engineer right?</li>
+        </ol>
+        <div class="write-label">16-row table (abbreviate only if every row is still visible) + counts + engineer check</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Navigation bottom">
+      <a href="logic-deduction-1-statements.html">← Set 1</a>
+      <span class="muted">Set 2 of 6</span>
+      <a href="logic-deduction-3-truth-tables.html">Next set →</a>
+    </nav>
+
+    <footer>Logic for beginners · Deduction · Lesson 2</footer>
+  </div>
+</body>
+</html>

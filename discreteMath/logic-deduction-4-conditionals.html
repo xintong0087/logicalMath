@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deduction — Lesson 4 · Conditionals</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Navigation">
+      <a href="logic-deduction-3-truth-tables.html">← Set 3</a>
+      <span class="muted">Set 4 of 6</span>
+      <a href="logic-deduction-5-arguments.html">Next set →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Deduction · Lesson 4</div>
+      <h1>If…then &amp; Biconditionals</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <div class="hint"><strong>Patience rule:</strong> When working with conditionals, write the contrapositive explicitly — do not swap parts from memory. For biconditionals, check <em>both</em> directions separately before declaring T or F.</div>
+
+    <section class="practice-section">
+      <h2>Deduction problems — Conditionals</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D4.1</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Original conditional: “If a number is divisible by 12, then it is divisible by 4.”</p>
+        <ol>
+          <li>Define <span class="symbol">p</span> and <span class="symbol">q</span> in symbols.</li>
+          <li>Write the <strong>converse</strong>, <strong>inverse</strong>, and <strong>contrapositive</strong> in English and in symbols.</li>
+          <li>For each of the four forms (original + three relatives), give a concrete integer example that shows whether <em>that form’s</em> implication holds or fails. You need four different examples — one per form — with arithmetic shown.</li>
+          <li>Build a 4-row truth table for the original <span class="symbol">p</span> → <span class="symbol">q</span> and a separate 4-row table for the contrapositive. Confirm they match row by row.</li>
+        </ol>
+        <div class="write-label">Four forms + four numeric examples + two tables</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D4.2</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Three chained claims about a single unknown truth value assignment to <span class="symbol">A</span>, <span class="symbol">B</span>, <span class="symbol">C</span> (treat each letter as “event A happens,” etc.):</p>
+        <ul>
+          <li>C1: If <span class="symbol">A</span> then <span class="symbol">B</span>.</li>
+          <li>C2: If <span class="symbol">B</span> then <span class="symbol">C</span>.</li>
+          <li>C3: If <span class="symbol">C</span> then not <span class="symbol">A</span>.</li>
+        </ul>
+        <ol>
+          <li>Assume <span class="symbol">A</span> is <span class="true">true</span>. Follow the chain step by step (write each deduction). What must be true about <span class="symbol">B</span> and <span class="symbol">C</span>? Do you reach a contradiction?</li>
+          <li>Therefore, what must <span class="symbol">A</span> be? Justify.</li>
+          <li>With <span class="symbol">A</span> fixed, list <strong>all</strong> assignments to (<span class="symbol">B</span>, <span class="symbol">C</span>) that make C1, C2, and C3 all true simultaneously. Use an exhaustive 4-row table for (<span class="symbol">B</span>, <span class="symbol">C</span>) if helpful.</li>
+          <li>Translate C1–C3 into one English story (three sentences max) that matches your solution.</li>
+        </ol>
+        <div class="write-label">Chain reasoning + complete (B,C) list + story</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D4.3</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Build a full 8-row truth table for:</p>
+        <p style="font-family:system-ui,sans-serif;">(<span class="symbol">p</span> ↔ <span class="symbol">q</span>) → (<span class="symbol">r</span> → <span class="symbol">p</span>)</p>
+        <p>Include columns for <span class="symbol">p</span>↔<span class="symbol">q</span>, <span class="symbol">r</span>→<span class="symbol">p</span>, and the final conditional.</p>
+        <ol>
+          <li>How many rows make the final column false? List them.</li>
+          <li>For each false row, explain in English why the outer conditional failed (remember: false only when hypothesis T and conclusion F).</li>
+          <li>Does any row have <span class="symbol">p</span>↔<span class="symbol">q</span> true while <span class="symbol">r</span>→<span class="symbol">p</span> is false? If yes, identify all such rows.</li>
+        </ol>
+        <div class="write-label">8-row table + false-row analysis</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D4.4</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>A librarian gives you five clues about a hidden book (genre is mystery or sci-fi; length is short or long; cover is red or blue). Each clue is a conditional or biconditional:</p>
+        <ol>
+          <li>If the book is sci-fi, then the cover is blue.</li>
+          <li>If the cover is red, then the book is long.</li>
+          <li>The book is short if and only if it is mystery.</li>
+          <li>If the book is long and mystery, then the cover is not blue.</li>
+          <li>If the book is sci-fi, then it is not long.</li>
+        </ol>
+        <p>Define letters for the four atomic facts (mystery, sci-fi, short, long, red, blue — use as many letters as you need, but be consistent).</p>
+        <ol type="a">
+          <li>Translate all five clues into symbols.</li>
+          <li>List every consistent assignment of genre, length, and cover that satisfies all five. Check each candidate against every clue — no skipping.</li>
+          <li>Is the hidden book uniquely determined? Prove your answer.</li>
+        </ol>
+        <div class="write-label">Symbolization + case check + uniqueness proof</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Navigation bottom">
+      <a href="logic-deduction-3-truth-tables.html">← Set 3</a>
+      <span class="muted">Set 4 of 6</span>
+      <a href="logic-deduction-5-arguments.html">Next set →</a>
+    </nav>
+
+    <footer>Logic for beginners · Deduction · Lesson 4</footer>
+  </div>
+</body>
+</html>

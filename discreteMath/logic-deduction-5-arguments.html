@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deduction — Lesson 5 · Arguments</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Navigation">
+      <a href="logic-deduction-4-conditionals.html">← Set 4</a>
+      <span class="muted">Set 5 of 6</span>
+      <a href="logic-deduction-6-puzzles.html">Next set →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Deduction · Lesson 5</div>
+      <h1>Valid Arguments &amp; Fallacies</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <div class="hint"><strong>Patience rule:</strong> To claim an argument is valid, show that in every row where all premises are T, the conclusion is T. To claim invalidity, exhibit one row (or one story) where premises are T and conclusion F. Name the fallacy only after that check.</div>
+
+    <section class="practice-section">
+      <h2>Deduction problems — Arguments</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D5.1</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Consider this argument (define your own letters):</p>
+        <ul>
+          <li>P1: If I study, then I pass.</li>
+          <li>P2: If I pass, then I graduate.</li>
+          <li>P3: If I graduate, then I get a job.</li>
+          <li>P4: I study.</li>
+          <li>Conclusion: I get a job.</li>
+        </ul>
+        <ol>
+          <li>Symbolize P1–P4 and the conclusion.</li>
+          <li>Derive the conclusion in <strong>numbered steps</strong>, naming each inference (e.g. modus ponens) as you use it. You need at least three steps.</li>
+          <li>Build a truth table for the four atomic letters involved. Verify: in every row where P1–P4 are all T, the conclusion is T. (You may use a 4-row table if you reduce to two letters — explain any reduction.)</li>
+        </ol>
+        <div class="write-label">Symbols + numbered proof + validity table</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D5.2</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>For each argument below: (i) symbolize, (ii) valid or invalid, (iii) if invalid name the fallacy and give a concrete counterexample story, (iv) if valid, give one modus ponens / modus tollens chain.</p>
+        <ol type="A">
+          <li>If the alarm is on, someone opened the door. The alarm is on. So someone opened the door.</li>
+          <li>If the alarm is on, someone opened the door. Someone opened the door. So the alarm is on.</li>
+          <li>If the alarm is on, someone opened the door. The alarm is not on. So nobody opened the door.</li>
+          <li>If the alarm is on, someone opened the door. Nobody opened the door. So the alarm is not on.</li>
+        </ol>
+        <p>Process all four — they look similar on purpose.</p>
+        <div class="write-label">Four structured analyses (i)–(iv)</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D5.3</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Negation + De Morgan drill (show every rewrite step):</p>
+        <p>Original English: “It is false that the shop is open and (the sale is on or the manager is here).”</p>
+        <ol>
+          <li>Let <span class="symbol">o</span> = shop open, <span class="symbol">s</span> = sale on, <span class="symbol">m</span> = manager here. Write the original as ¬(<span class="symbol">o</span> ∧ (<span class="symbol">s</span> ∨ <span class="symbol">m</span>)).</li>
+          <li>Apply De Morgan’s laws twice until you have a formula using only ¬, ∧, ∨ with <strong>no</strong> parentheses around a negated AND/OR group.</li>
+          <li>Translate the final form back into plain English.</li>
+          <li>Pick one assignment of T/F to <span class="symbol">o</span>, <span class="symbol">s</span>, <span class="symbol">m</span> and evaluate <strong>both</strong> the original and the final form step by step to confirm they match.</li>
+        </ol>
+        <div class="write-label">Rewrites + English + evaluation check</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D5.4</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Longer argument — test validity carefully:</p>
+        <ul>
+          <li>P1: Everyone who plays chess enjoys strategy games.</li>
+          <li>P2: No one who enjoys strategy games hates puzzles.</li>
+          <li>P3: Maya hates puzzles.</li>
+          <li>Conclusion: Maya does not play chess.</li>
+        </ul>
+        <p>Use letters: <span class="symbol">c</span> = Maya plays chess, <span class="symbol">s</span> = Maya enjoys strategy games, <span class="symbol">h</span> = Maya hates puzzles. Translate P1–P3 and the conclusion as best you can with → and ¬ (P2 is a “no one” statement — rewrite as “If someone enjoys strategy games, they do not hate puzzles” for Maya).</p>
+        <ol>
+          <li>Write the symbolized argument.</li>
+          <li>Attempt a step-by-step derivation of the conclusion from the premises. If you get stuck, say where.</li>
+          <li>Build a 3-variable truth table (8 rows) for the conjunction of premises → conclusion. Is the argument valid?</li>
+          <li>If valid, summarize the proof in three sentences for a non-expert. If invalid, give a counterexample row.</li>
+        </ol>
+        <div class="write-label">Symbolization + derivation attempt + 8-row test + summary</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Navigation bottom">
+      <a href="logic-deduction-4-conditionals.html">← Set 4</a>
+      <span class="muted">Set 5 of 6</span>
+      <a href="logic-deduction-6-puzzles.html">Next set →</a>
+    </nav>
+
+    <footer>Logic for beginners · Deduction · Lesson 5</footer>
+  </div>
+</body>
+</html>

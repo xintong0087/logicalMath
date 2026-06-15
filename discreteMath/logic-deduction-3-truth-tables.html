@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deduction — Lesson 3 · Truth Tables</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Navigation">
+      <a href="logic-deduction-2-connectives.html">← Set 2</a>
+      <span class="muted">Set 3 of 6</span>
+      <a href="logic-deduction-4-conditionals.html">Next set →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Deduction · Lesson 3</div>
+      <h1>Truth Tables</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <div class="hint"><strong>Patience rule:</strong> Build tables column by column, left to right. A final column copied from memory without sub-columns will not count. Circle or mark each row as you finish it so you can see you did not skip one.</div>
+
+    <section class="practice-section">
+      <h2>Deduction problems — Truth tables</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D3.1</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Build a complete 8-row truth table for:</p>
+        <p style="font-family:system-ui,sans-serif;">((<span class="symbol">p</span> ∨ <span class="symbol">q</span>) ∧ ¬<span class="symbol">r</span>) ∨ (<span class="symbol">p</span> ∧ <span class="symbol">q</span> ∧ <span class="symbol">r</span>)</p>
+        <p>Required columns, in order: <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span>, <span class="symbol">p</span>∨<span class="symbol">q</span>, ¬<span class="symbol">r</span>, (<span class="symbol">p</span>∨<span class="symbol">q</span>)∧¬<span class="symbol">r</span>, <span class="symbol">p</span>∧<span class="symbol">q</span>, <span class="symbol">p</span>∧<span class="symbol">q</span>∧<span class="symbol">r</span>, final ∨.</p>
+        <ol>
+          <li>Fill every cell.</li>
+          <li>List the row numbers (1–8) where the final column is T.</li>
+          <li>Describe in plain English a single real-world situation that matches one true row and one false row (different rows).</li>
+        </ol>
+        <div class="write-label">Full table + row list + two English stories</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D3.2</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Determine whether each formula is a <strong>tautology</strong>, <strong>contradiction</strong>, or <strong>contingency</strong>. You must build a full table for each — no shortcuts from memory.</p>
+        <ol type="a">
+          <li>(<span class="symbol">p</span> ∧ (<span class="symbol">q</span> ∨ ¬<span class="symbol">q</span>)) ∨ (¬<span class="symbol">p</span> ∧ <span class="symbol">q</span>)</li>
+          <li>(<span class="symbol">p</span> ∨ <span class="symbol">q</span>) ∧ (¬<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span>) ∧ (<span class="symbol">p</span> ∨ ¬<span class="symbol">q</span>)</li>
+          <li>¬(<span class="symbol">p</span> ∨ (<span class="symbol">q</span> ∧ ¬<span class="symbol">p</span>)) ∨ (<span class="symbol">p</span> ∧ <span class="symbol">q</span>)</li>
+        </ol>
+        <p>For (b), the table uses only <span class="symbol">p</span> and <span class="symbol">q</span> (4 rows). For (a) and (c), use 4 rows as well.</p>
+        <div class="write-label">Three tables + label each tautology/contradiction/contingency</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D3.3</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Prove or disprove logical equivalence by full tables:</p>
+        <p style="font-family:system-ui,sans-serif;">Left: (<span class="symbol">p</span> → <span class="symbol">q</span>) ∧ (<span class="symbol">p</span> → ¬<span class="symbol">q</span>) &nbsp;&nbsp; Right: ¬<span class="symbol">p</span></p>
+        <p>(Recall: <span class="symbol">p</span> → <span class="symbol">q</span> is ¬<span class="symbol">p</span> ∨ <span class="symbol">q</span> when building columns.)</p>
+        <ol>
+          <li>Build one 4-row table with separate columns for each side. Include columns for both conditionals on the left.</li>
+          <li>State equivalent or not.</li>
+          <li>Explain in English what the left side means (“If <span class="symbol">p</span> then… and if <span class="symbol">p</span> then…”) and why that matches or clashes with ¬<span class="symbol">p</span>.</li>
+        </ol>
+        <div class="write-label">Table + equivalence verdict + English explanation</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D3.4</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Design challenge — read carefully:</p>
+        <p>Find a compound using exactly <strong>four</strong> connective symbols (each ¬ counts as one; each ∧, ∨ counts as one) over <span class="symbol">p</span>, <span class="symbol">q</span>, <span class="symbol">r</span> such that the final column is T in <strong>exactly three</strong> of the eight rows.</p>
+        <ol>
+          <li>Write your candidate formula.</li>
+          <li>Verify with a full 8-row table (no gaps).</li>
+          <li>Explain why the three true rows are the only ones — walk row by row.</li>
+          <li>Verify you used exactly four connective symbols (underline each).</li>
+        </ol>
+        <div class="write-label">Formula + verification + row-by-row walk + connective count</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Navigation bottom">
+      <a href="logic-deduction-2-connectives.html">← Set 2</a>
+      <span class="muted">Set 3 of 6</span>
+      <a href="logic-deduction-4-conditionals.html">Next set →</a>
+    </nav>
+
+    <footer>Logic for beginners · Deduction · Lesson 3</footer>
+  </div>
+</body>
+</html>

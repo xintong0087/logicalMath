@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deduction — Lesson 1 · Statements and Truth</title>
+  <link rel="stylesheet" href="logic-shared.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="lesson-nav" aria-label="Navigation">
+      <a href="logic-deduction-index.html">← Deduction index</a>
+      <span class="muted">Set 1 of 6</span>
+      <a href="logic-deduction-2-connectives.html">Next set →</a>
+    </nav>
+
+    <header>
+      <div class="lesson-num">Deduction · Lesson 1</div>
+      <h1>Statements and Truth</h1>
+      <p class="subtitle">Name: <span style="display:inline-block; min-width:180px; border-bottom:1px solid var(--line);"></span> &nbsp; Date: <span style="display:inline-block; min-width:110px; border-bottom:1px solid var(--line);"></span></p>
+    </header>
+
+    <div class="hint"><strong>Patience rule:</strong> Every item below needs a written justification. A label alone (“statement, true”) is not enough — explain <em>why</em> it is a statement, or why it is open / not a statement.</div>
+
+    <section class="practice-section">
+      <h2>Deduction problems — Statements</h2>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D1.1</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Classify each sentence below as exactly one of: <strong>Statement (T)</strong>, <strong>Statement (F)</strong>, <strong>Open sentence</strong>, or <strong>Not a statement</strong>. For every item, write 2–4 sentences of justification. If you need a precise definition to decide (e.g. what counts as a “planet”), state the definition you are using <em>before</em> giving T/F.</p>
+        <ol>
+          <li>“The integer <span class="symbol">k</span> satisfies <span class="symbol">k</span><sup>2</sup> &lt; 10.”</li>
+          <li>“Every even integer greater than 2 is the sum of two primes.”</li>
+          <li>“Stop cheating on the quiz.”</li>
+          <li>“This sentence contains exactly eight words.”</li>
+          <li>“The temperature in Melbourne at noon on 1 January 2025 was above 30 °C.”</li>
+          <li>“Either team A wins or team B wins, but not both.”</li>
+          <li>“Why does ice float?”</li>
+          <li>“For all real numbers <span class="symbol">x</span>, if <span class="symbol">x</span> &gt; 3 then <span class="symbol">x</span><sup>2</sup> &gt; 9.”</li>
+          <li>“The movie was boring.”</li>
+          <li>“There exists an integer <span class="symbol">n</span> such that <span class="symbol">n</span><sup>2</sup> = 2.”</li>
+        </ol>
+        <div class="write-label">Ten classifications with justifications (use numbered sub-answers)</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D1.2</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Fix the domain to <strong>integers from 1 through 12</strong>. Let <span class="symbol">P(n)</span> = “<span class="symbol">n</span> is prime,” <span class="symbol">Q(n)</span> = “<span class="symbol">n</span> has exactly two positive divisors,” <span class="symbol">R(n)</span> = “<span class="symbol">n</span> is a perfect square.”</p>
+        <p>For each <span class="symbol">n</span> in {1, 2, 4, 6, 9, 11}, do all of the following:</p>
+        <ol type="a">
+          <li>State whether <span class="symbol">P(n)</span>, <span class="symbol">Q(n)</span>, and <span class="symbol">R(n)</span> are open or closed once <span class="symbol">n</span> is fixed.</li>
+          <li>Give the truth value of each closed sentence.</li>
+          <li>Decide whether “<span class="symbol">P(n)</span> if and only if <span class="symbol">Q(n)</span>” is true for that fixed <span class="symbol">n</span>, with one sentence of reason.</li>
+        </ol>
+        <p>You must process all six values of <span class="symbol">n</span> — no skipping “obvious” ones.</p>
+        <div class="write-label">Six blocks (one per n) with (a)(b)(c)</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D1.3</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>A teacher hides an integer <span class="symbol">x</span> with 1 ≤ <span class="symbol">x</span> ≤ 10. Four students make claims:</p>
+        <ul>
+          <li><strong>Ada:</strong> “<span class="symbol">x</span> is even and <span class="symbol">x</span> &gt; 5.”</li>
+          <li><strong>Ben:</strong> “<span class="symbol">x</span> is odd or <span class="symbol">x</span> = 4.”</li>
+          <li><strong>Cara:</strong> “It is not true that <span class="symbol">x</span> ≤ 3.”</li>
+          <li><strong>Dan:</strong> “<span class="symbol">x</span> is a prime number.”</li>
+        </ul>
+        <p>You are told: <strong>exactly three</strong> of the four claims are true statements for the hidden <span class="symbol">x</span>, and <strong>exactly one</strong> is false.</p>
+        <ol>
+          <li>Rewrite each student’s claim as a closed statement by replacing <span class="symbol">x</span> with a variable over {1,…,10} (already done above — now treat them as formulas).</li>
+          <li>For each candidate <span class="symbol">x</span> from 1 to 10, record T/F for all four claims in a table (10 rows).</li>
+          <li>Circle every <span class="symbol">x</span> that satisfies the “exactly three true” rule.</li>
+          <li>Prove whether the solution for <span class="symbol">x</span> is unique. If not unique, list all possibilities and explain what extra information would decide between them.</li>
+        </ol>
+        <div class="write-label">Table + conclusion + uniqueness argument</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+
+      <div class="practice">
+        <div class="practice-head">
+          <span class="practice-num">D1.4</span>
+          <span class="diff diff-hard">Deduction</span>
+        </div>
+        <p>Consider the sentence: “The 100th decimal digit of π is 7.”</p>
+        <ol>
+          <li>Is this a statement in classical logic? Argue both sides briefly, then state which side you accept and why.</li>
+          <li>Now consider: “The 100th decimal digit of π will be 7 when someone computes it.” Does changing the tense change your classification? Explain in 4–6 sentences.</li>
+          <li>Write your own example of a sentence that <em>sounds</em> like a statement about the future but is <em>not</em> a statement under the “fixed right now” standard. Then write a closely related sentence that <em>is</em> a statement because the standard is pinned down.</li>
+        </ol>
+        <div class="write-label">Three-part written analysis</div>
+        <div class="write xtall" contenteditable="true" spellcheck="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="Navigation bottom">
+      <a href="logic-deduction-index.html">← Deduction index</a>
+      <span class="muted">Set 1 of 6</span>
+      <a href="logic-deduction-2-connectives.html">Next set →</a>
+    </nav>
+
+    <footer>Logic for beginners · Deduction · Lesson 1</footer>
+  </div>
+</body>
+</html>
